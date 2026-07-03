@@ -1,1 +1,22 @@
-
+server:
+  port: 8081
+spring:
+  application:
+    name: dialing-robot-web
+  cloud:
+    nacos:
+      server-addr: 127.0.0.1:8848
+      username: nacos
+      password: nacos
+dubbo:
+  application:
+    name: dialing-robot-web
+  config-center:
+    enabled: false
+  registry:
+    address: nacos://127.0.0.1:8848?username=nacos&password=nacos
+  protocol:
+    name: dubbo
+    port: -1
+  scan:
+    base-packages: cn.lxm.core.service
