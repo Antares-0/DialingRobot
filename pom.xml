@@ -11,9 +11,11 @@
     <modules>
         <module>DialingRobotWeb</module>
         <module>DialingRobotCore</module>
+        <module>DialingRobotCommon</module>
     </modules>
 
     <properties>
+        <dialing.robot.common.version>1.0</dialing.robot.common.version>
         <maven.compiler.source>21</maven.compiler.source>
         <maven.compiler.target>21</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -26,6 +28,12 @@
 
     <dependencyManagement>
         <dependencies>
+            <!--DialingRobot的common-->
+            <dependency>
+                <groupId>cn.lxm</groupId>
+                <artifactId>DialingRobotCommon</artifactId>
+                <version>${dialing.robot.common.version}</version>
+            </dependency>
             <!-- springboot 版本管理 -->
             <dependency>
                 <groupId>org.springframework.boot</groupId>

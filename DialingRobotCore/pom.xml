@@ -18,6 +18,11 @@
     </properties>
 
     <dependencies>
+        <!--DialingRobot的common-->
+        <dependency>
+            <groupId>cn.lxm</groupId>
+            <artifactId>DialingRobotCommon</artifactId>
+        </dependency>
         <!-- Web依赖，当前模块必须引入，用来启用Tomcat+@RestController -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -43,6 +48,11 @@
         <dependency>
             <groupId>com.alibaba.nacos</groupId>
             <artifactId>nacos-client</artifactId>
+        </dependency>
+        <!--nacos 服务注册与发现-->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
         </dependency>
 
     </dependencies>

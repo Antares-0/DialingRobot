@@ -8,6 +8,12 @@ spring:
       server-addr: 127.0.0.1:8848
       username: nacos
       password: nacos
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/dialing_robot?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf8mb4&useSSL=false&allowMultiQueries=true
+    username: root
+    password: liu199836
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
 dubbo:
   application:
     name: dialing-robot-web
@@ -20,3 +26,6 @@ dubbo:
     port: -1
   scan:
     base-packages: cn.lxm.core.service
+  qos:
+    enable: false
+    port: -1
