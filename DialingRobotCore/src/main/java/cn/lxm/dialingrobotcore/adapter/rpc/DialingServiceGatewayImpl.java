@@ -1,12 +1,14 @@
 package cn.lxm.dialingrobotcore.adapter.rpc;
 
-import cn.lxm.DialingRobotCommon.api.DialingServiceGatewayI;
-import cn.lxm.DialingRobotCommon.dto.DialingInviteCall.DialingInviteCallRequestDTO;
-import cn.lxm.DialingRobotCommon.dto.DialingInviteCall.DialingInviteCallResponseDTO;
+import cn.lxm.dialingrobotcommon.api.DialingServiceGatewayI;
+import cn.lxm.dialingrobotcommon.base.adapter.BaseResponse;
+import cn.lxm.dialingrobotcommon.dto.dialinginvitecall.DialingInviteCallRequestDTO;
+import cn.lxm.dialingrobotcommon.dto.dialinginvitecall.DialingInviteCallResponseVO;
 import cn.lxm.dialingrobotcore.application.DialingInviteServiceI;
-import cn.lxm.dialingrobotcore.domain.dto.DialingResult;
+import cn.lxm.dialingrobotcore.domain.dto.response.DialingResultDTO;
 import cn.lxm.dialingrobotcore.domain.dto.cmd.DialingInviteCmd;
 import cn.lxm.dialingrobotcore.infrastructure.convertor.RequestConverter;
+import cn.lxm.dialingrobotcore.infrastructure.convertor.ResponseConverter;
 import org.apache.dubbo.config.annotation.DubboService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -21,11 +23,10 @@ public class DialingServiceGatewayImpl implements DialingServiceGatewayI {
     private DialingInviteServiceI DialingInviteService;
 
     @Override
-    public DialingInviteCallResponseDTO DialingInviteCall(DialingInviteCallRequestDTO reqDTO) {
+    public BaseResponse<DialingInviteCallResponseVO> DialingInviteCall(DialingInviteCallRequestDTO reqDTO) {
         DialingInviteCmd cmd = RequestConverter.convertDialingInviteCallRequestDTO2DialingInviteCmd(reqDTO);
-        DialingResult result = DialingInviteService.DialingInviteCall(cmd);
-
-        return null;
+        DialingResultDTO result = DialingInviteService.DialingInviteCall(cmd);
+        return ResponseConverter.convertDialingResultDTO2DialingInviteCallResponseDTO(result);
     }
 
 }

@@ -1,7 +1,7 @@
-package cn.lxm.DialingRobotCommon.dto.DialingInviteCall;
+package cn.lxm.dialingrobotcommon.dto.dialinginvitecall;
 
 
-import cn.lxm.DialingRobotCommon.base.BaseRequest;
+import cn.lxm.dialingrobotcommon.base.adapter.BaseRequest;
 
 public class DialingInviteCallRequestDTO extends BaseRequest {
 

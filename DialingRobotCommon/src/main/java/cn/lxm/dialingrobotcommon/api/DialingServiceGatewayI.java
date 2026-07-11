@@ -1,11 +1,11 @@
-package cn.lxm.dialingrobotweb.domain.gateway;
+package cn.lxm.dialingrobotcommon.api;
 
 import cn.lxm.dialingrobotcommon.base.adapter.BaseResponse;
 import cn.lxm.dialingrobotcommon.dto.dialinginvitecall.DialingInviteCallRequestDTO;
 import cn.lxm.dialingrobotcommon.dto.dialinginvitecall.DialingInviteCallResponseVO;
 
-public interface InviteDialingCallGateway {
+public interface DialingServiceGatewayI {
 
-    BaseResponse<DialingInviteCallResponseVO> DialingInviteCall(DialingInviteCallRequestDTO requestDTO);
+    BaseResponse<DialingInviteCallResponseVO> DialingInviteCall(DialingInviteCallRequestDTO req);
 
 }

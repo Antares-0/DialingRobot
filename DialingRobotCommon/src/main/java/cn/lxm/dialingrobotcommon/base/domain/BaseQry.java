@@ -1,4 +1,4 @@
-package cn.lxm.dialingrobotcore.domain.dto.qry;
+package cn.lxm.dialingrobotcommon.base.domain;
 
 public class BaseQry {
 

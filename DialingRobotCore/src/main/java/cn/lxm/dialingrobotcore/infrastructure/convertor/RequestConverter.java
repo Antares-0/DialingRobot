@@ -1,10 +1,10 @@
 package cn.lxm.dialingrobotcore.infrastructure.convertor;
 
-import cn.lxm.DialingRobotCommon.base.BaseRequest;
-import cn.lxm.DialingRobotCommon.dto.DialingInviteCall.DialingInviteCallRequestDTO;
-import cn.lxm.dialingrobotcore.domain.dto.cmd.BaseCmd;
+import cn.lxm.dialingrobotcommon.base.adapter.BaseRequest;
+import cn.lxm.dialingrobotcommon.dto.dialinginvitecall.DialingInviteCallRequestDTO;
+import cn.lxm.dialingrobotcommon.base.domain.BaseCmd;
 import cn.lxm.dialingrobotcore.domain.dto.cmd.DialingInviteCmd;
-import cn.lxm.dialingrobotcore.domain.dto.qry.BaseQry;
+import cn.lxm.dialingrobotcommon.base.domain.BaseQry;
 
 public class RequestConverter {
 

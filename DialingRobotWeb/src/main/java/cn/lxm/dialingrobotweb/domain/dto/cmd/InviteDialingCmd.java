@@ -1,8 +1,8 @@
-package cn.lxm.dialingrobotcore.domain.dto.cmd;
+package cn.lxm.dialingrobotweb.domain.dto.cmd;
 
 import cn.lxm.dialingrobotcommon.base.domain.BaseCmd;
 
-public class DialingInviteCmd {
+public class InviteDialingCmd {
 
     private BaseCmd baseCmd;
 
@@ -28,14 +28,6 @@ public class DialingInviteCmd {
         this.callID = callID;
     }
 
-    public String getFromTag() {
-        return fromTag;
-    }
-
-    public void setFromTag(String fromTag) {
-        this.fromTag = fromTag;
-    }
-
     public String getToTag() {
         return toTag;
     }
@@ -44,10 +36,11 @@ public class DialingInviteCmd {
         this.toTag = toTag;
     }
 
-    public DialingInviteCmd(BaseCmd baseCmd, String callID, String fromTag, String toTag) {
-        this.baseCmd = baseCmd;
-        this.callID = callID;
+    public String getFromTag() {
+        return fromTag;
+    }
+
+    public void setFromTag(String fromTag) {
         this.fromTag = fromTag;
-        this.toTag = toTag;
     }
 }

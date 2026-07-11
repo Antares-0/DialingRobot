@@ -1,6 +1,6 @@
-package cn.lxm.DialingRobotCommon.base;
+package cn.lxm.dialingrobotcommon.base.domain;
 
-public class BaseResponse {
+public class BaseResp {
 
     private String logID;
 
@@ -32,12 +32,4 @@ public class BaseResponse {
         ErrorCode = errorCode;
     }
 
-    @Override
-    public String toString() {
-        return "BaseResponse{" +
-                "logID='" + logID + '\'' +
-                ", ErrorMessage='" + ErrorMessage + '\'' +
-                ", ErrorCode=" + ErrorCode +
-                '}';
-    }
 }

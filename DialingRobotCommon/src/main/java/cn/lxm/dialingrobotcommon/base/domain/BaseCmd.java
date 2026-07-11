@@ -1,6 +1,6 @@
-package cn.lxm.DialingRobotCommon.base;
+package cn.lxm.dialingrobotcommon.base.domain;
 
-public class BaseRequest {
+public class BaseCmd {
 
     private String logID;
 
@@ -9,6 +9,10 @@ public class BaseRequest {
     }
 
     public void setLogID(String logID) {
+        this.logID = logID;
+    }
+
+    public BaseCmd(String logID) {
         this.logID = logID;
     }
 }

@@ -1,4 +1,4 @@
-package cn.lxm.DialingRobotCommon.api;
+package cn.lxm.dialingrobotcommon.api;
 
 public interface ScriptServiceGatewayI {
 
