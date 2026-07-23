@@ -29,3 +29,5 @@ dubbo:
   qos:
     enable: false
     port: -1
+  metadata-report:
+    file-cache: false

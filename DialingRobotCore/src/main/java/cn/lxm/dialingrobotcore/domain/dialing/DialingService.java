@@ -10,7 +10,7 @@ public class DialingService {
     public DialingResultDTO Dialing(DialingInviteCmd cmd) {
         System.out.println("cmd in");
         System.err.println("cmd in");
-        return null;
+        return new DialingResultDTO();
     }
 
 }

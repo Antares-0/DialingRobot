@@ -11,12 +11,13 @@ import cn.lxm.dialingrobotcore.infrastructure.convertor.RequestConverter;
 import cn.lxm.dialingrobotcore.infrastructure.convertor.ResponseConverter;
 import org.apache.dubbo.config.annotation.DubboService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
+import org.springframework.stereotype.Component;
 
+@Component
 @DubboService(
-        timeout = 5000
+        timeout = 5000,
+        interfaceClass = DialingServiceGatewayI.class
 )
-@Controller
 public class DialingServiceGatewayImpl implements DialingServiceGatewayI {
 
     @Autowired

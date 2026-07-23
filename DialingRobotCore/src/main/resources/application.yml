@@ -29,6 +29,8 @@ dubbo:
   qos:
     enable: false
     port: -1
+  metadata-report:
+    file-cache: false
 
 ## 可选：MyBatis/MyBatis-Plus 配套配置（按需开启）
 #mybatis:
